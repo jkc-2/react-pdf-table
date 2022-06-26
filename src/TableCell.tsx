@@ -87,10 +87,10 @@ export class TableCell extends React.PureComponent<TableCellProps> {
             whiteSpace: "pre-wrap"
         };
 
-        const mergedStyles: ReactPDF.Style[] = [
-            defaultStyle,
+        const mergedStyles: ReactPDF.Style = {
+            ...defaultStyle,
             ...transformToArray(this.props.style)
-        ];
+        };
 
         return (
             <View
